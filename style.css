@@ -26,14 +26,18 @@ body {
   padding: 0 3rem;
 }
 
+#header-img {
+  position: absolute;
+}
+
 /* BACKGROUND */
 
 .showcase {
   background-color: var(--primary-color);
   color: rgb(255, 255, 255);
   height: 100vh;
-  width: 100vw;
-  position: absolute;
+  width: 100%;
+  position: relative;
   top: 0;
   left: 0;
 }
@@ -48,14 +52,14 @@ body {
 }
 
 @keyframes animatedbackground {
-  0% {background: var(--background-one);}
-  20% {background: var(--background-one);}
-  25% {background: var(--background-two);}
-  45% {background: var(--background-two);}
-  50% {background: var(--background-three);}
-  70% {background: var(--background-three);}
-  75% {background: var(--background-four);}
-  100% {background: var(--background-four);}
+  0% {background: var(--background-one) fixed;}
+  20% {background: var(--background-one) fixed;}
+  25% {background: var(--background-two) fixed;}
+  45% {background: var(--background-two) fixed;}
+  50% {background: var(--background-three) fixed;}
+  70% {background: var(--background-three) fixed;}
+  75% {background: var(--background-four) fixed;}
+  100% {background: var(--background-four) fixed;}
 }
 
 .showcase .showcase-inner {
@@ -124,7 +128,6 @@ body {
 /* END FORM MAIN PAGE*/
 
 /* MENU */
-
 /* Show menu*/
 
 .menu-wrap .toggler:checked ~ .menu {
@@ -248,8 +251,8 @@ body {
 .menu-wrap .menu > div {
   background: var(--overlay-color);
   border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
+  width: 80vw;
+  height: 80vw;
   display: flex;
   flex: none;
   align-items: center;
@@ -280,3 +283,106 @@ body {
 }
 
 /* END MENU*/
+
+/* SECTION ABOUT */
+
+.about {
+  height: auto;
+  display: relative;
+}
+
+.about-box {
+  padding: 90px 0;
+  align-content: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 32.5% 5% 32.5%;
+}
+
+/* video frame */
+
+.about-video {
+  width: 100%;
+  height: 0%;
+  margin: auto; 
+  background: gray;
+  padding-top: 56.25%;
+  position: relative;
+  border-radius: 10px;
+  max-width: 760px;
+  max-height: 428px;
+}
+
+#video {
+  min-width: 420px;
+  min-height: 236.25px;
+  max-width: 760px;
+  max-height: 428px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* About text */
+
+.about-text h2, .about-text h3 {
+  font-weight: lighter;
+  padding-bottom: 10px;
+  color: #cf1717;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  padding-top: 2em;
+  text-align: right;
+}
+
+/* SECTION ABOUT END*/
+
+/* EXPERIENCES */
+
+/* #experiences {
+} */
+
+.experiences-shade {
+  background: url('https://images.unsplash.com/photo-1530801588537-594a77d18206?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover fixed;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.experiences-body{
+  position: relative;   
+  display: flex;
+  max-width: 1050px;
+  height: 100%;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.experiences-grid{
+  position: absolute;
+  margin: auto;
+  background-color: rgba(114, 114, 114, 0.767);
+  display: grid;
+  height: 80%;
+  grid-template-columns: 50% 50%;
+}
+
+.experiences-image-1 {
+  width: auto;
+  height: 80%;
+  overflow: hidden;
+}
+
